@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>All Chats:</h2>
+    <ul>
+        <button><a href="/chats/new">Add Chat</a></button>
+        <br><br>
+        <%for(let chat of chats){%>
+            <div class="chatBox">
+                <p>From: <%=chat.from%></p>
+                <div class="msgBox">
+                    <p><%=chat.msg%></p>
+                    <button><a href="/chats/<%=chat._id%>/edit">Edit</a></button>
+                    <br><br>
+                    <form action="/chats/<%=chat._id%>?_method=DELETE" method="post">
+                        <button>Delete Chat</button>
+                    </form>
+                </div>
+                <p>To: <%=chat.to%></p>
+                <hr>
+                <!-- using date to be shown in formate:first line ---time and second line----date  -->
+                <!-- to do this first we convert it to string by .toString() then spliting the string based on space and from that we take 4th element i.e. time as split make a array of all after spliting them according to the sppace -->
+                <p><%= chat.created_at.toString().split(" ")[4] %></p>
+                <!-- for date we split than slice(take out value at index 0 to 3) the array made by split and then we join this all by space-->
+                <p><%= chat.created_at.toString().split(" ").slice(0,4).join(" - ") %></p>
+            </div>
+            <br>
+        <%}%>
+    </ul>
+</body>
+</html>

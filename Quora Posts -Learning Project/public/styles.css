@@ -1,0 +1,19 @@
+h2{
+    color: rgb(142, 103, 5);
+}
+.post{
+    background-color: #e4fcfa;
+    
+}
+.usernaem , .post_id{
+    color: brown;
+    font-style: italic;
+}
+.content{
+    color: rgb(58, 26, 88);
+}
+.post_btn,.post_submit_btn,.show_btn,.Submit_edit ,.delete_btn,.all_posts{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.2rem;
+    font-weight: 500;
+}

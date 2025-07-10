@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h2>Edit Post:</h2>
+    <h3>Username: @<%=post.username%></h3>
+    <h3>id: <%=post.id%></h3>
+    <form action="/posts/<%=post.id%>?_method=PATCH" method="post">
+        <!-- here we used patch by an package as html only support get and post request -->
+        <!-- we used the method as post but needed the patch to accept it so we used the method-override to make it patchby using the _method=PATCH i action after the url to request and need to require this in index.js -->
+        <textarea name="content" id="" rows="10" cols="35"><%=post.content%></textarea>
+        <br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

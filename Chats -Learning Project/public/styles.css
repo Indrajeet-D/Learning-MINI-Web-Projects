@@ -1,0 +1,33 @@
+h2{
+    color: rgb(101, 255, 101);
+}
+
+.chatBox{
+    background-color: #d6f9f9;
+    color: chocolate;
+    padding: 16px;
+    border-radius: 20px;
+    /* display: inline-block; */
+}
+
+.msgBox{
+    font-style: italic;
+    color: darkgreen;
+    padding: 5px 16px;
+    background-color: #f8f1f1;
+    border-radius: 20px;
+}
+button{
+   padding:5px 16px;
+   border-radius: 4px;
+   cursor: pointer;
+   background-color: #d6f9f9;
+   /* border: none; */
+}
+
+a{  
+    color: darkgreen;
+    font-weight: 500;
+    font-size: large;
+    text-decoration: none;
+}

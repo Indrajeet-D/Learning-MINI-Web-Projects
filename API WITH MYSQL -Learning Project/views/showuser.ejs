@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show User</title>
+    <style>
+        table,td,th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Users joined with us:</h2>
+    <table>
+        <tr>
+            <th>UserId</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+        <%for(let user of result){%>
+            <tr>
+                <td><%=user.id%></td>
+                <td><%=user.username%></td>
+                <td><%=user.email%></td>
+                <td><button><a href="http://localhost:8080/user/<%=user.id%>/edit">Update</a></button></td>
+                <td><button><a href="http://localhost:8080/user/<%=user.id%>/delete">Delete Account</a></button></td>
+            </tr>
+        <%}%>
+    </table>
+    <br><br>
+    <button><a href="http://localhost:8080/user/new">Create Account</a></button>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Elaborated</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h2>Related Post</h2>
+    <div class="post">
+        <h3 class="post_id">Post ID: <%=post.id%></h3>
+        <h3 class="username">Username: @<%=post.username%></h3>
+        <h3 class="content">Content: <%=post.content%></h3>
+    </div>
+    <form action="/posts" method="get">
+        <button class="all_posts">Go to All Posts</button>
+    </form>
+</body>
+</html>
